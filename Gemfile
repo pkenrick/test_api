@@ -48,3 +48,6 @@ gem 'bootstrap-sass'
 
 # Use bootstrap_form to make pretty forms
 gem 'bootstrap_form'
+
+# User puma for web server
+gem 'puma'
