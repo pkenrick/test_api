@@ -1271,3 +1271,34 @@ Started GET "/users/new" for ::1 at 2017-09-16 12:30:38 +0100
 Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (17.0ms)
 Completed 200 OK in 414ms (Views: 389.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2017-09-16 12:34:41 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 118ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-09-16 12:37:13 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 105ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-09-16 12:37:29 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kloa8KUbeiG9a+U6dsxulEaruQIM6FGw0KauKsUTnXZn64J/NVqVgcA20sVh8OiiKiDOt9mKuvQ+1sdLAroFmA==", "user"=>{"name"=>"TestUser", "email"=>"testy@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('testy@email.com') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "TestUser"], ["email", "testy@email.com"], ["password_digest", "$2a$10$qG/jHoFS2zIIL2RSfdZ5luSS0HukGEktDP3agBslyVbAw.rx2L.YW"], ["created_at", "2017-09-16 11:37:29.878877"], ["updated_at", "2017-09-16 11:37:29.878877"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 136ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/4" for ::1 at 2017-09-16 12:37:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 31.3ms | ActiveRecord: 0.2ms)
