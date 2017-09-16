@@ -42,3 +42,9 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# Use bootstrap to make pages pretty
+gem 'bootstrap-sass'
+
+# Use bootstrap_form to make pretty forms
+gem 'bootstrap_form'
