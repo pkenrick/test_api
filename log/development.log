@@ -1945,3 +1945,451 @@ Started GET "/login" for ::1 at 2017-09-16 15:08:47 +0100
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-16 15:35:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/Users/paulkenrick/Projects/personal/test_api/app/controllers/users_controller.rb:34: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/users_controller.rb:34: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.3ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.0ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.7ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.3ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-16 15:35:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 16ms
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/helpers/sessions_helper.rb:4:in `login'
+  app/controllers/users_controller.rb:32:in `logged_in_user'
+
+
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.2ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.8ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.0ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-16 15:36:02 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for ::1 at 2017-09-16 15:36:02 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 319ms (Views: 318.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-16 15:36:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-16 15:36:10 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-09-16 15:37:25 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 85ms (Views: 73.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2017-09-16 15:37:39 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2I9wdRfBDmOEIoN9jpQJ8cLOWsI9mjfJ41X8nWEQOsWVPuj6h4Dhw/l/tIKZqI/HrkUtd+j43I0NJZX8prmiKw==", "user"=>{"name"=>"Gift", "email"=>"gift@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('gift@email.com') LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gift"], ["email", "gift@email.com"], ["password_digest", "$2a$10$fqgWEyTEMGXnh1KwZC.HPuHkw7v0c1wGZDpyiwzUP2UMnSVYv.ECa"], ["created_at", "2017-09-16 14:37:39.630476"], ["updated_at", "2017-09-16 14:37:39.630476"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 101ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/5" for ::1 at 2017-09-16 15:37:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-16 15:37:39 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-16 15:40:03 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsNepHuZkesuvX7o0yqjPFh5I2zJlOw5ZxgPw6YiLaRHcsYr69h+S1PgSRfEFiUKNPJU2Rz2B32JaGaiYYu1Sg==", "session"=>{"email"=>"gift@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gift@email.com"]]
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 127ms (Views: 37.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/login" for ::1 at 2017-09-16 15:41:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9UvZd0yNvfkWhD+YuTtE0uYBZ60LELBgfJ6HOQyISMa4+kH43MxSWWvZCGeuB8LkiooQGN5yWySS7u5YyyHQKA==", "session"=>{"email"=>"gift@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gift@email.com"]]
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 110ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/5" for ::1 at 2017-09-16 15:41:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-16 15:41:13 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 368ms (Views: 367.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-16 15:42:18 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2UZ6CvJ45osmnEe95LrK28ZeyZxoLgbhoUkm43ReMRa1IFnu4gMOlHHRuHgrm0dA5IMk6TCU19o9U36SnjgKg==", "session"=>{"email"=>"gift", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "gift"]]
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 40.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for ::1 at 2017-09-16 15:42:20 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4Yg8XY6B5QqXgrKab015GZFV6RuJJdUoLd5zPI5Dkd2N7h+5nvoNFcDPTV+gbPSCs4gEbtGfBBOxxCtNZCWqQ==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", ""]]
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2017-09-16 15:42:55 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-16 15:43:06 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vMYwErSZprOvbRw+utu8qY5xjfuAgUrwNA712DdLzj7xd6idJNhJE9IwK8Gt5zqf4vr6TlXjobTafpy58OJW0A==", "session"=>{"email"=>"gift@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "gift@email.com"]]
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 96ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/5" for ::1 at 2017-09-16 15:43:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-16 15:43:06 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:07:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 439ms (Views: 426.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:07:26 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N5TzT6Ng8LyiG+swfCF+u9fjIHvLf37i64kAyWIQfGh6JWvAMyEfHN9G3M9rHfiNu2hXzh4dlaYF+Wmopbnkhg==", "session"=>{"email"=>"paul@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+Completed 500 Internal Server Error in 38ms
+
+NoMethodError (undefined method `errors' for #<ActiveSupport::Logger:0x007ff333721928>
+Did you mean?  error
+               error?):
+  app/controllers/sessions_controller.rb:14:in `create'
+
+
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.0ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.1ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paulkenrick/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.5ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:07:46 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N5TzT6Ng8LyiG+swfCF+u9fjIHvLf37i64kAyWIQfGh6JWvAMyEfHN9G3M9rHfiNu2hXzh4dlaYF+Wmopbnkhg==", "session"=>{"email"=>"paul@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "paul@email.com"]]
+Error occured during login
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:10:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 442ms (Views: 429.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:10:06 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qanc+DR9sczCIc1MH/KUFWBwOdjauXNec1sJV0RLHJsMGER3pDxebL98+rMIzhIjDPtObQ/bmBqdK2A2g+KEdQ==", "session"=>{"email"=>"sdlkjlsdfj", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "sdlkjlsdfj"]]
+User not found.
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 115ms (Views: 93.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:10:26 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PrMipHxNXV7+VoNL4mPDpN/stNMT9mTdO/sIgjiZC/9zAror7Ayy/oMLtLT1X0WSs2fDZsaUj5nVi2Hj/zCTEQ==", "session"=>{"email"=>"paul@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "paul@email.com"]]
+Error: User not found.
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 73ms (Views: 65.7ms | ActiveRecord: 0.8ms)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:11:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JSW8V8W/G+PE8TOn5vrbXDNrS56+P3yRsr019te2mWdolCTYVf70Q7msBFjxxl1qX+A8K2tdl9VczVyXEB8BiQ==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 111ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-18 19:11:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:11:11 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 420ms (Views: 419.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:11:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 367ms (Views: 357.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:11:49 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G5aL9t5I2v4f9VEsz9x+KUcaErl6GKn+rzmi8CTbZf5WJxN5Tgk1XmKoZtPY4PgfK5FlDK96QrpBScuR43L9EA==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 98ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-18 19:11:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:11:49 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:12:49 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 75ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:12:56 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SF1+7NdavnObEMq+lOl+1KGpbAlyCOi6R6KM/ArN0e4F7OZjRxtR0+ZN/UGD1fjizSIbvKdqA/6p0uWdzWRJAA==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 90ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-18 19:12:56 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:12:56 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:13:52 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:14:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Li42V4K0UVQo00UHUx6HJwMBhZvVK0DIo+7MCgs+6Kljn67YEvW+9FWOcvhEIgERb4ryLgBJq4xNnqVrzJdwRw==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 93ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-18 19:14:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:14:00 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:14:34 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:14:41 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vvwAw0XpErXeokDFFN86Dx1akN4O11bVt19zangKjTbzTZhM1aj9FaP/dzoD47w5cdHna9u1vZFZLxoLv6MV2A==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 103ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-18 19:14:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:14:41 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:15:11 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:15:16 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2reoUJ5DCbIqn7a4PKCp5bMN06okvtSQFZwCrA0RbJCXBjDfDgLmElfCgUcrnC/T34akH/HcP9T77GvNyrj0fg==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Error: Password not valid.
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 231ms (Views: 48.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:15:27 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LJG0kZ1nO7O2DXO3MjgYENCwP+VCSlmPNp1MDztlHfdhICweDSbUE8tQREglBJ4mvDtIUJcossvY7SVu/MyFGQ==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "test@email.com"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 84ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for ::1 at 2017-09-18 19:15:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-09-18 19:15:44 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HTVdvJt3qkymD8VV8pudd/Zpi5LTTgRlInyoFe2WOOFQhMUzCzZF7NtS8qrlpxtBmuL8JwYs7yHMDMF0Kj+gDw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:15:44 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:15:49 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KeYoeYf05jtbDNsSayVjt/tz6bmolnWOW1V/xuWJykpkV7D2F7UJmyZR7O18GeWBl/ieDH30nsq1JRanIiBSpA==", "session"=>{"email"=>"test@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "test@email.com"]]
+Error: Password not valid.
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 188ms (Views: 24.7ms | ActiveRecord: 0.7ms)
