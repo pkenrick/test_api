@@ -2393,3 +2393,18 @@ Processing by SessionsController#create as HTML
 Error: Password not valid.
   Rendered sessions/new.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 188ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2017-09-18 19:25:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 425ms (Views: 412.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-18 19:25:38 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"plsrb5ZddS3lfA5HWzXn3LxCZBSuRjFSyraeLJ82CPPr6rPgBhyajZghObhMCWHq0MkToXsk2hYkxvdNWJ+QHQ==", "session"=>{"email"=>"jaljdsfl", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jaljdsfl"]]
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 85ms (Views: 67.4ms | ActiveRecord: 0.5ms)

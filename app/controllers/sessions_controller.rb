@@ -11,8 +11,8 @@ class SessionsController < ApplicationController
        login(user)
        redirect_to user
      else
-       Rails.logger.error("Error: User not found.") if user.nil?
-       Rails.logger.error("Error: Password not valid.") if user && !user.authenticate(params[:session][:password])
+       puts("====== Error: User not found.") if user.nil?
+       puts("====== Error: Password not valid.") if user && !user.authenticate(params[:session][:password])
        render 'new'
      end
    end
