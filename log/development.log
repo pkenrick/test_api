@@ -2524,3 +2524,63 @@ Started POST "/test" for ::1 at 2017-09-20 22:33:03 +0100
 Processing by SessionsController#test_post as HTML
   Parameters: {"authenticity_token"=>"l8Xi3zaa9w4uoTUXGaZVPvRtAgyNBJOwUpezCsXlqcDadHpQptsYrlP8AugOmtMImOZ1uVhmePS859prAkwxLg=="}
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/6" for ::1 at 2017-09-20 22:34:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+
+
+Started GET "/users/6" for ::1 at 2017-09-20 22:34:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 496ms (Views: 446.3ms | ActiveRecord: 0.9ms)
+Completed 200 OK in 503ms (Views: 463.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/test" for ::1 at 2017-09-20 22:34:28 +0100
+Processing by SessionsController#test_post as HTML
+  Parameters: {"authenticity_token"=>"cCrosGoVeOAebgUFHqbd8SMG6RpApqzkxQ/sRsIbxBM9m3A/+lSXQGMzMvoJmlvHT42er5XER6Arf4UnBbJc/Q=="}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for ::1 at 2017-09-20 22:34:43 +0100
+Processing by SessionsController#test_get as HTML
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/test" for ::1 at 2017-09-20 22:35:00 +0100
+Processing by SessionsController#test_post as HTML
+  Parameters: {"authenticity_token"=>"cCrosGoVeOAebgUFHqbd8SMG6RpApqzkxQ/sRsIbxBM9m3A/+lSXQGMzMvoJmlvHT42er5XER6Arf4UnBbJc/Q=="}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/6" for ::1 at 2017-09-20 23:16:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 547ms (Views: 510.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/test" for ::1 at 2017-09-20 23:16:24 +0100
+Processing by SessionsController#test_post as HTML
+  Parameters: {"authenticity_token"=>"ECAfVu/Hw66pvpTlDayKSctzXp83Ggxh5y/D8ggJRvJdkYfZf4YsDtTjoxoakAx/p/gpKuJ45yUJX6qTz6DeHA=="}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/test" for ::1 at 2017-09-20 23:16:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#test_post as HTML
+  Parameters: {"authenticity_token"=>"ECAfVu/Hw66pvpTlDayKSctzXp83Ggxh5y/D8ggJRvJdkYfZf4YsDtTjoxoakAx/p/gpKuJ45yUJX6qTz6DeHA=="}
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.0ms)

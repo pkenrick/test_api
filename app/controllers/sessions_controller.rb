@@ -25,12 +25,12 @@ class SessionsController < ApplicationController
    def test_get
      sample_hash = { 1 => 'one', 2 => 'two', 3 => 'three' }
      puts "====== inside the test get method ======"
-     render json: sample_hash.to_json
+     render json: sample_hash.to_json, status: :ok
    end
 
    def test_post
      sample_hash = { 1 => 'one', 2 => 'two', 3 => 'three' }
      puts "====== inside the test post method ======"
-     render json: sample_hash.to_json
+     render json: sample_hash.to_json, status: :ok
    end
 end
