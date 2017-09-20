@@ -21,4 +21,9 @@ class SessionsController < ApplicationController
      logout
      redirect_to login_path
    end
+
+   def test
+     sample_hash = { 1 => 'one', 2 => 'two', 3 => 'three' }
+     render json: sample_hash.to_json
+   end
 end
