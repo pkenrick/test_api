@@ -2460,3 +2460,67 @@ Processing by SessionsController#create as HTML
   [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.co"]]
   Rendered sessions/new.html.erb within layouts/application (13.3ms)
 Completed 200 OK in 104ms (Views: 83.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/test" for ::1 at 2017-09-20 22:29:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#test as HTML
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for ::1 at 2017-09-20 22:31:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#test_get as HTML
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-09-20 22:32:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 467ms (Views: 455.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-09-20 22:32:22 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LWkWXqLkQyCMlS4KSmOyiPqvZv85ofUTYBps3dtsUvVg2I7RMqWsgPHIGfVdXzS+liQRSuzDHleOagW8HMXKGw==", "session"=>{"email"=>"paul@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 82ms (Views: 61.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2017-09-20 22:32:45 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 86ms (Views: 77.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-09-20 22:32:55 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cwI7s2XOpjg+naPekDJiqxRNHOSUSRG3fX0LfQa/VmUfZBhXdbVOJ2nQXBtfE+8wNpDxkczzwIzhZ1MM7Nltw==", "user"=>{"name"=>"paul", "email"=>"paul@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('paul@email.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "paul"], ["email", "paul@email.com"], ["password_digest", "$2a$10$9Pm9IoRaCEm8cQPa04cdauvmYwDtFIdIkdW1/pZJa7AvwqmAJC1Oi"], ["created_at", "2017-09-20 21:32:55.911811"], ["updated_at", "2017-09-20 21:32:55.911811"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 152ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/6" for ::1 at 2017-09-20 22:32:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/test" for ::1 at 2017-09-20 22:33:00 +0100
+Processing by SessionsController#test_get as HTML
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/test" for ::1 at 2017-09-20 22:33:03 +0100
+Processing by SessionsController#test_post as HTML
+  Parameters: {"authenticity_token"=>"l8Xi3zaa9w4uoTUXGaZVPvRtAgyNBJOwUpezCsXlqcDadHpQptsYrlP8AugOmtMImOZ1uVhmePS859prAkwxLg=="}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)

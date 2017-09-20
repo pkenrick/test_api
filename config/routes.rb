@@ -59,5 +59,6 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-  post 'test', to: 'sessions#test'
+  get 'test', to: 'sessions#test_get'
+  post 'test', to: 'sessions#test_post'
 end

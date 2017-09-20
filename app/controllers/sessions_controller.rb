@@ -22,8 +22,15 @@ class SessionsController < ApplicationController
      redirect_to login_path
    end
 
-   def test
+   def test_get
      sample_hash = { 1 => 'one', 2 => 'two', 3 => 'three' }
+     puts "====== inside the test get method ======"
+     render json: sample_hash.to_json
+   end
+
+   def test_post
+     sample_hash = { 1 => 'one', 2 => 'two', 3 => 'three' }
+     puts "====== inside the test post method ======"
      render json: sample_hash.to_json
    end
 end
