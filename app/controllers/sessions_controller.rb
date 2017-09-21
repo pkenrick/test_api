@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
        login(user)
        respond_to do |format|
          format.html { redirect_to user }
-         format.json { access_token: 'lkdjflskdjflksjdlksjdlskdjf' }
+         format.json { render json: { access_token: 'lkdjflskdjflksjdlksjdlskdjf' } }
        end
      else
        puts("====== Error: User not found.") if user.nil?
