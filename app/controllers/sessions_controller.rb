@@ -11,7 +11,10 @@ class SessionsController < ApplicationController
      user = User.find_by(email: params[:session][:email].downcase)
      if user && user.authenticate(params[:session][:password])
        login(user)
-       redirect_to user
+       respond_to do |format|
+         format.html { redirect_to user }
+         format.json { access_token: 'lkdjflskdjflksjdlksjdlskdjf' }
+       end
      else
        puts("====== Error: User not found.") if user.nil?
        puts("====== Error: Password not valid.") if user && !user.authenticate(params[:session][:password])
