@@ -4,13 +4,13 @@ class Api::SessionsController < Api::BaseController
 
   def create
     user = User.find_by(email: params[:email])
-
-    puts "------ #{params[:email]}"
-
-    if user
-      puts "====== user found! ======"
+    if user && user.authenticate(params[:password])
+      puts "====== user authenticated :) ======"
+      auth_token = user.generate_auth_token
+      render json: { auth_token: auth_token }
     else
-      puts "====== user not found :( ======"
+      puts "====== user not authenticated :( ======"
+      render json: { errors: [{ detail: 'Error with your login or password' }] }
     end
   end
 end
