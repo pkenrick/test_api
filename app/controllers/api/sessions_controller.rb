@@ -5,6 +5,8 @@ class Api::SessionsController < Api::BaseController
   def create
     user = User.find_by(email: params[:email])
 
+    puts "------ #{params[:email]}"
+
     if user
       puts "====== user found! ======"
     else
