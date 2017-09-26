@@ -61,4 +61,12 @@ Rails.application.routes.draw do
 
   get 'test', to: 'sessions#test_get'
   post 'test', to: 'sessions#test_post'
+
+  namespace :api, :defaults => { :format => :json } do
+    # as :user do
+      post '/login' => 'sessions#create'
+      delete '/logout' => 'sessions#destroy'
+    # end
+  end
+
 end
