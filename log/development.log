@@ -3621,3 +3621,28 @@ Processing by Api::SessionsController#create as JSON
   [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
   [1m[36mSQL (2.8ms)[0m  [1mUPDATE "users" SET "auth_token" = '7eac1094c7bbb7c33b1b77ae0ef4e022' WHERE "users"."id" = ?[0m  [["id", 6]]
 Completed 200 OK in 137ms (Views: 1.1ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/api/login?email=paul%40email.com&password=[FILTERED]" for ::1 at 2017-09-27 22:34:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"authenticity_token"=>"0IUJrDngh+lHu3On/n4Ljn+BmjZtdjq2j6RvgkCX/MidNJEjqaFoSTrmRFjpQo24Ewrtg7gU0fJh1Abjhz5kJg==", "email"=>"paul@email.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+  [1m[36mSQL (1.8ms)[0m  [1mUPDATE "users" SET "auth_token" = '93a69d94622d28332eef7dff6ba720a5' WHERE "users"."id" = ?[0m  [["id", 6]]
+Completed 200 OK in 131ms (Views: 0.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/login?email=paul%40email.com&password=[FILTERED]" for ::1 at 2017-09-27 22:35:01 +0100
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"authenticity_token"=>"0IUJrDngh+lHu3On/n4Ljn+BmjZtdjq2j6RvgkCX/MidNJEjqaFoSTrmRFjpQo24Ewrtg7gU0fJh1Abjhz5kJg==", "email"=>"paul@email.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "users" SET "auth_token" = 'd2629bd7a9e8d1df7ffc33aa9ebda0a1' WHERE "users"."id" = ?[0m  [["id", 6]]
+Completed 200 OK in 93ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/login?email=paul%40email.com&password=[FILTERED]" for ::1 at 2017-09-27 22:36:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"authenticity_token"=>"0IUJrDngh+lHu3On/n4Ljn+BmjZtdjq2j6RvgkCX/MidNJEjqaFoSTrmRFjpQo24Ewrtg7gU0fJh1Abjhz5kJg==", "email"=>"paul@email.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+Completed 200 OK in 117ms (Views: 0.4ms | ActiveRecord: 0.7ms)

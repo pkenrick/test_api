@@ -6,17 +6,11 @@ class Api::SessionsController < Api::BaseController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       puts "====== user authenticated :) ======"
-      auth_token = user.generate_auth_token
-      render json: { auth_token: 'sssh this is the auth token' }
+      # auth_token = user.generate_auth_token
+      render json: { auth_token: 'This is the secret auth token; shhhhhh!' }
     else
       puts "====== user not authenticated :( ======"
-      render json: { errors: [{ detail: 'Error with your login or password' }] }, status: 401
+      render json: { errors: [{ detail: 'Error with your login or password' }] }
     end
-  end
-
-  def destroy
-    user = current_user
-    user.invalidate_token
-    head :ok
   end
 end
