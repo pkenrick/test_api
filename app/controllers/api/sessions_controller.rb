@@ -7,7 +7,7 @@ class Api::SessionsController < Api::BaseController
     if user && user.authenticate(params[:password])
       puts "====== user authenticated :) ======"
       auth_token = user.generate_auth_token
-      render json: { auth_token: auth_token }
+      render json: { auth_token: 'sssh this is the auth token' }
     else
       puts "====== user not authenticated :( ======"
       render json: { errors: [{ detail: 'Error with your login or password' }] }, status: 401
