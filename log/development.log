@@ -3606,3 +3606,18 @@ Processing by Api::SessionsController#create as JSON
   Parameters: {"authenticity_token"=>"UK8aUoK+5mezZAxr3d7CdVf9qrEELJhjtGZ5WEtYQrgdHoLdEv8Jx845O5TK4kRDO3bdBNFOcydaFhA5jPHaVg==", "email"=>"paul@email.com", "password"=>"[FILTERED]"}
   [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "paul@email.com"]]
 Completed 200 OK in 97ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for ::1 at 2017-09-27 22:28:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 431ms (Views: 419.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/login?email=paul%40email.com&password=[FILTERED]" for ::1 at 2017-09-27 22:28:48 +0100
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"authenticity_token"=>"0IUJrDngh+lHu3On/n4Ljn+BmjZtdjq2j6RvgkCX/MidNJEjqaFoSTrmRFjpQo24Ewrtg7gU0fJh1Abjhz5kJg==", "email"=>"paul@email.com", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+  [1m[36mSQL (2.8ms)[0m  [1mUPDATE "users" SET "auth_token" = '7eac1094c7bbb7c33b1b77ae0ef4e022' WHERE "users"."id" = ?[0m  [["id", 6]]
+Completed 200 OK in 137ms (Views: 1.1ms | ActiveRecord: 4.7ms)
