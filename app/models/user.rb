@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
     token = SecureRandom.hex
     puts "==== token generated: #{token}"
     self.update_columns(auth_token: token)
+    puts "====== #{self.errors.full_messages}"
     puts "==== updated column"
     token
   end
