@@ -9,6 +9,7 @@ class Api::BaseController < ApplicationController
   end
 
   def current_user
+    puts "====== in the right place ======="
     @current_user ||= authenticate_token
   end
 

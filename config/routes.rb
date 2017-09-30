@@ -59,13 +59,12 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-  get 'test', to: 'sessions#test_get'
-  post 'test', to: 'sessions#test_post'
 
   namespace :api, :defaults => { :format => :json } do
     # as :user do
       post '/login' => 'sessions#create'
       delete '/logout' => 'sessions#destroy'
+      get 'user_tasks', to: 'task#user_tasks'
     # end
   end
 

@@ -7,13 +7,11 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
 
+  has_many :tasks
+
   def generate_auth_token
-    puts "==== in the generate_auth_token method ===="
     token = SecureRandom.hex
-    puts "==== token generated: #{token}"
     self.update_columns(auth_token: token)
-    puts "====== #{self.errors.full_messages}"
-    puts "==== updated column"
     token
   end
 
