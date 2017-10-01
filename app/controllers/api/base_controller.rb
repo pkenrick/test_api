@@ -9,11 +9,11 @@ class Api::BaseController < ApplicationController
   end
 
   def current_user
-    puts "====== in the right place ======="
     @current_user ||= authenticate_token
   end
 
   def require_login!
+    puts "====== in the require login method ======="
     return true if authenticate_token
     render json: { errors: [{ detail: 'Access Denied' }] }, status: 401
   end
@@ -21,6 +21,7 @@ class Api::BaseController < ApplicationController
   private
 
   def authenticate_token
+    puts "====== in the authenticate token method ======="
     authenticate_with_http_token do |token, options|
       puts "==== #{token}"
       puts "---- #{options}"
