@@ -22,6 +22,7 @@ class Api::BaseController < ApplicationController
 
   def authenticate_token
     authenticate_with_http_token do |token, options|
+      puts "===== #{request.headers} ======"
       User.find_by(auth_token: token)
     end
   end
