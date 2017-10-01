@@ -4524,3 +4524,20 @@ Processing by Api::TaskController#user_tasks as JSON
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "e618452803503ec8c7e33ee022a5c7f5"]]
   [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?  [["user_id", 6]]
 Completed 200 OK in 71ms (Views: 12.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/login" for ::1 at 2017-10-01 18:08:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"paul@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"paul@email.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "paul@email.com"]]
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE "users" SET "auth_token" = '38863bbc528a59485e9ae6ffbf452b4d' WHERE "users"."id" = ?[0m  [["id", 6]]
+Completed 200 OK in 121ms (Views: 0.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/user_tasks" for ::1 at 2017-10-01 18:09:25 +0100
+Processing by Api::TaskController#user_tasks as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "38863bbc528a59485e9ae6ffbf452b4d"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "38863bbc528a59485e9ae6ffbf452b4d"]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?  [["user_id", 6]]
+Completed 200 OK in 86ms (Views: 12.3ms | ActiveRecord: 0.8ms)
