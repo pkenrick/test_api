@@ -14,6 +14,7 @@ class Api::BaseController < ApplicationController
   end
 
   def require_login!
+    puts "===== #{request.headers} ======"
     return true if authenticate_token
     render json: { errors: [{ detail: 'Access Denied' }] }, status: 401
   end
@@ -22,7 +23,6 @@ class Api::BaseController < ApplicationController
 
   def authenticate_token
     authenticate_with_http_token do |token, options|
-      puts "===== #{request.headers} ======"
       User.find_by(auth_token: token)
     end
   end
