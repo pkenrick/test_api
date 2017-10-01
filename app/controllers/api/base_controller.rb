@@ -22,7 +22,7 @@ class Api::BaseController < ApplicationController
 
   def authenticate_token
     puts "====== in the authenticate token method ======="
-    puts request.headers
+    puts request.headers.each{ |header| puts header }
     authenticate_with_http_token do |token, options|
       puts "==== #{token}"
       puts "---- #{options}"
